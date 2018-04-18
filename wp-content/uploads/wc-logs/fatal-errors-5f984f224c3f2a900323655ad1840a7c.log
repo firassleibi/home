@@ -1,0 +1,60 @@
+2018-04-17T12:41:41+00:00 CRITICAL Call to undefined function get_error()
+
+2018-04-17T18:56:31+00:00 CRITICAL Uncaught Error: Call to undefined function get_cart() in C:\wamp\www\home\wp-content\themes\storefront-child\woocommerce\checkout\form-checkout.php:145
+Stack trace:
+#0 C:\wamp\www\home\wp-content\plugins\woocommerce\includes\wc-core-functions.php(211): include()
+#1 C:\wamp\www\home\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-checkout.php(242): wc_get_template('checkout/form-c...', Array)
+#2 C:\wamp\www\home\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-checkout.php(68): WC_Shortcode_Checkout::checkout()
+#3 C:\wamp\www\home\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(76): WC_Shortcode_Checkout::output('')
+#4 C:\wamp\www\home\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(99): WC_Shortcodes::shortcode_wrapper(Array, '')
+#5 C:\wamp\www\home\wp-includes\shortcodes.php(319): WC_Shortcodes::checkout('', '', 'woocommerce_che...')
+#6 [internal function]: do_shortcode_tag(Array)
+#7 C:\wamp\www\home\wp-includes\shortcodes.php(197): p
+
+2018-04-17T18:56:56+00:00 CRITICAL Uncaught Error: Using $this when not in object context in C:\wamp\www\home\wp-content\plugins\woocommerce\includes\class-wc-cart.php:612
+Stack trace:
+#0 C:\wamp\www\home\wp-content\themes\storefront-child\woocommerce\checkout\form-checkout.php(145): WC_Cart::get_cart()
+#1 C:\wamp\www\home\wp-content\plugins\woocommerce\includes\wc-core-functions.php(211): include('C:\\wamp\\www\\hom...')
+#2 C:\wamp\www\home\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-checkout.php(242): wc_get_template('checkout/form-c...', Array)
+#3 C:\wamp\www\home\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-checkout.php(68): WC_Shortcode_Checkout::checkout()
+#4 C:\wamp\www\home\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(76): WC_Shortcode_Checkout::output('')
+#5 C:\wamp\www\home\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(99): WC_Shortcodes::shortcode_wrapper(Array, '')
+#6 C:\wamp\www\home\wp-includes\shortcodes.php(319): WC_Shortcodes::checkout('', 
+
+2018-04-17T19:31:38+00:00 CRITICAL Uncaught Error: Call to undefined function storefront_is_woocommerce_activated() in C:\wamp\www\home\wp-content\themes\storefront\functions.php:39
+Stack trace:
+#0 C:\wamp\www\home\wp-settings.php(426): include()
+#1 C:\wamp\www\home\wp-config.php(89): require_once('C:\\wamp\\www\\hom...')
+#2 C:\wamp\www\home\wp-load.php(37): require_once('C:\\wamp\\www\\hom...')
+#3 C:\wamp\www\home\wp-blog-header.php(13): require_once('C:\\wamp\\www\\hom...')
+#4 C:\wamp\www\home\index.php(17): require('C:\\wamp\\www\\hom...')
+#5 {main}
+  thrown
+
+2018-04-17T19:45:06+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function custom_button_replacement(), 1 passed in C:\wamp\www\home\wp-includes\class-wp-hook.php on line 286 and exactly 2 expected in C:\wamp\www\home\wp-content\themes\storefront-child\functions.php:73
+Stack trace:
+#0 C:\wamp\www\home\wp-includes\class-wp-hook.php(286): custom_button_replacement('')
+#1 C:\wamp\www\home\wp-includes\class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 C:\wamp\www\home\wp-includes\plugin.php(453): WP_Hook->do_action(Array)
+#3 C:\wamp\www\home\wp-content\plugins\woocommerce\templates\content-single-product.php(61): do_action('woocommerce_sin...')
+#4 C:\wamp\www\home\wp-includes\template.php(690): require('C:\\wamp\\www\\hom...')
+#5 C:\wamp\www\home\wp-content\plugins\woocommerce\includes\wc-core-functions.php(180): load_template('C:\\wamp\\www\\hom...', false)
+#6 C:\wamp\www\home\wp-content\plugins\woocommerce\templates\single-product.php(37): wc_get_template_part('content', 'single-product')
+#7 C:\wamp\www\home\wp-inc
+
+2018-04-17T19:46:03+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function conditionally_replacing_add_to_cart_button(), 1 passed in C:\wamp\www\home\wp-includes\class-wp-hook.php on line 286 and exactly 2 expected in C:\wamp\www\home\wp-content\themes\storefront-child\functions.php:73
+Stack trace:
+#0 C:\wamp\www\home\wp-includes\class-wp-hook.php(286): conditionally_replacing_add_to_cart_button('')
+#1 C:\wamp\www\home\wp-includes\class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 C:\wamp\www\home\wp-includes\plugin.php(453): WP_Hook->do_action(Array)
+#3 C:\wamp\www\home\wp-content\plugins\woocommerce\templates\content-single-product.php(61): do_action('woocommerce_sin...')
+#4 C:\wamp\www\home\wp-includes\template.php(690): require('C:\\wamp\\www\\hom...')
+#5 C:\wamp\www\home\wp-content\plugins\woocommerce\includes\wc-core-functions.php(180): load_template('C:\\wamp\\www\\hom...', false)
+#6 C:\wamp\www\home\wp-content\plugins\woocommerce\templates\single-product.php(37): wc_get_template_part('content', 'single-pr
+
+2018-04-17T19:46:58+00:00 CRITICAL Cannot redeclare custom_button_replacement() (previously declared in C:\wamp\www\home\wp-content\themes\storefront-child\functions.php:94)
+
+2018-04-18T12:50:01+00:00 CRITICAL Call to a member function get_id() on null
+
+2018-04-18T12:54:58+00:00 CRITICAL Call to a member function get_id() on null
+

@@ -1,0 +1,391 @@
+@font-face {
+    font-family: 'HBFont';
+    src: url(HBFont.otf);
+}
+.hb {
+    font-family: 'HBFont';
+    font-weight:normal;
+    font-style: normal;
+}
+.hb:after {
+    line-height: 25px;
+    font-size:3rem;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+/* Logo */
+
+.hb.text {
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%);
+}
+.hb.text:after {
+    width:auto
+}
+.hb.text.home:after {
+    content:'\f500';
+    color:#000;
+}
+.hb.text.bazar:after {
+    content:'\f501';
+    color:#b39964
+}
+
+/* Category Icons */
+
+.hb.jewellery:after {
+    content:'\f400';
+}
+.hb.men:after {
+    content:'\f401';
+}
+.hb.women:after {
+    content:'\f402';
+}
+.hb.boy:after {
+    content:'\f403';
+}
+.hb.girl:after {
+    content:'\f404';
+}
+
+/* Small Icons */
+
+.hb.phone:after {
+     content:'\f001';
+}
+.hb.email:after {
+    content:'\f002';
+}
+.hb.bag:after {
+    content:'\f003';
+}
+.hb.search:after {
+    content:'\f004';
+}
+.hb.bazar:after {
+    content:'\f005';
+}
+.hb.globe:after {
+    content:'\f006';
+}
+.hb.trash:after {
+    content:'\f107';
+}
+.hb.edit:after {
+    content:'\f008';
+}
+.hb.menu:after {
+    content:'\f009';
+}
+.hb.menuc:after {
+    content:'\f150';
+}
+.hb.menuo:after {
+    content:'\f151';
+}
+.hb.options:after {
+    content:'\f010';
+}
+.hb.chat:after {
+    content:'\f011';
+}
+.hb.heart:after {
+    content:'\f012';
+}
+.hb.heart.la:after {
+    content:'\f013';
+}
+.hb.user:after {
+    content:'\f014';
+}
+.hb.male:after {
+    content:'\f016';
+}
+.hb.female:after {
+    content:'\f017';
+}
+.hb.grid:after {
+    content:'\f018';
+}
+.hb.list:after, .hb.additional_information:after {
+    content:'\f019';
+}
+.hb.accept:after {
+    content:'\f020';
+}
+.hb.decline:after, .hb.close:after {
+    content:'\f021';
+}
+.hb.check:after {
+    content:'\f022';
+}
+.hb.check.la:after {
+    content:'\f023';
+}
+.hb.radio:after {
+    content:'\f024';
+}
+.hb.radio.la:after {
+    content:'\f025';
+}
+.hb.arrow:after {
+    content:'\f026';
+}
+.hb.arrow.up:after {
+    transform:rotate(180deg);
+}
+.hb.arrow.down:after {
+    transform:rotate(0deg);
+}
+.hb.arrow.left:after {
+    transform: rotate(90deg) translateY(7px);
+}
+.hb.arrow.right:after {
+    transform: rotate(-90deg) translateY(5px);
+}
+.hb.info:after {
+    content:'\f027';
+}
+.hb.star:after {
+    content:'\f028';
+}
+.hb.star.la:after, .hb.reviews:after {
+    content:'\f029';
+}
+.hb.play:after {
+    content:'\f030';
+}
+.hb.wishlist:after {
+    content:'\f031';
+}
+.hb.purchases:after {
+    content:'\f032';
+}
+.hb.pay:after {
+    content:'\f033';
+}
+.hb.dashboard:after {
+    content:'\f034';
+}
+.hb.location:after {
+    content:'\f035';
+}
+.hb.size:after {
+    content:'\f036';
+}
+.hb.product:after, .hb.description:after {
+    content:'\f037';
+}
+.hb.support:after {
+    content:'\f038';
+}
+.hb.deliver:after, .hb.ship_tab:after {
+    content:'\f039';
+}
+.hb.sale:after {
+    content:'\f040';
+}
+.hb.doc:after, .hb.document:after {
+    content:'\f041';
+}
+.hb.share:after {
+    content:'\f042';
+}
+.hb.register:after {
+    content:'\f043';
+}
+.hb.filter:after {
+    content:'\f044';
+}
+.hb.filters:after {
+    content:'\f502';
+}
+.hb.contract:after {
+    content:'\f152';
+}
+.hb.expand:after {
+    content:'\f153';
+}
+.hb.bell:after {
+    content:'\f154';
+}
+.hb.mobile:after {
+    content:'\f155';
+}
+
+/* Social Icons */
+
+.hb.fb:after {
+    content:'\f090';
+}
+.hb.tw:after {
+    content:'\f091';
+}
+.hb.ig:after {
+    content:'\f092';
+}
+.hb.yt:after {
+    content:'\f093';
+}
+.hb.gp:after {
+    content:'\f094';
+}
+.hb.pn:after {
+    content:'\f095';
+}
+
+/* Large Icons */
+
+.hb.phone.lg:after {
+    content:'\f101';
+}
+.hb.email.lg:after {
+    content:'\f102';
+}
+.hb.bag.lg:after {
+    content:'\f103';
+}
+.hb.search.lg:after {
+    content:'\f104';
+}
+.hb.bazar.lg:after {
+    content:'\f105';
+}
+.hb.globe.lg:after {
+    content:'\f106';
+}
+.hb.trash.lg:after {
+    content:'\f107';
+}
+.hb.edit.lg:after {
+    content:'\f108';
+}
+.hb.menu.lg:after {
+    content:'\f109';
+}
+.hb.menuc.lg:after {
+    content:'\f150';
+}
+.hb.menuo.lg:after {
+    content:'\f151';
+}
+.hb.options.lg:after {
+    content:'\f110';
+}
+.hb.chat.lg:after {
+    content:'\f111';
+}
+.hb.heart.lg:after {
+    content:'\f112';
+}
+.hb.heart.la.lg:after {
+    content:'\f113';
+}
+.hb.user.lg:after {
+    content:'\f114';
+}
+.hb.male.lg:after {
+    content:'\f116';
+}
+.hb.female.lg:after {
+    content:'\f117';
+}
+.hb.grid.lg:after {
+    content:'\f118';
+}
+.hb.list.lg:after, .hb.description.lg:after {
+    content:'\f119';
+}
+.hb.accept.lg:after {
+    content:'\f120';
+}
+.hb.decline.lg:after, .hb.close:after {
+    content:'\f121';
+}
+.hb.check.lg:after {
+    content:'\f122';
+}
+.hb.check.la.lg:after {
+    content:'\f123';
+}
+.hb.radio.lg:after {
+    content:'\f124';
+}
+.hb.radio.la.lg:after {
+    content:'\f125';
+}
+.hb.arrow.lg:after {
+    content:'\f126';
+}
+.hb.info.lg:after {
+    content:'\f127';
+}
+.hb.star.lg:after {
+    content:'\f128';
+}
+.hb.star.lg.la:after {
+    content:'\f129';
+}
+.hb.play.lg:after {
+    content:'\f130';
+}
+.hb.wishlist.lg:after {
+    content:'\f131';
+}
+.hb.purchases.lg:after {
+    content:'\f132';
+}
+.hb.pay.lg:after {
+    content:'\f133';
+}
+.hb.dashboard.lg:after {
+    content:'\f134';
+}
+.hb.location.lg:after {
+    content:'\f135';
+}
+.hb.size.lg:after {
+    content:'\f136';
+}
+.hb.product.lg:after {
+    content:'\f137';
+}
+.hb.support.lg:after {
+    content:'\f138';
+}
+.hb.deliver.lg:after, .hb.ship_tab.lg:after {
+    content:'\f139';
+}
+.hb.sale.lg:after {
+    content:'\f140';
+}
+.hb.doc.lg:after, .hb.document:after {
+    content:'\f141';
+}
+.hb.share.lg:after {
+    content:'\f142';
+}
+.hb.register.lg:after {
+    content:'\f143';
+}
+.hb.filter.lg:after {
+    content:'\f144';
+}
+.hb.contract.lg:after {
+    content:'\f152';
+}
+.hb.expand.lg:after {
+    content:'\f153';
+}
+.hb.bell.lg:after {
+    content:'\f154';
+}
+.hb.mobile.lg:after {
+    content:'\f155';
+}
