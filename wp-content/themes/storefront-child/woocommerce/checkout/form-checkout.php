@@ -7,11 +7,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 if(!is_user_logged_in()){
 ?>
 <nav>
-		<ol class="cd-multi-steps text-bottom count">
-			<li class="current"><a href="#">Login</a></li>
-			<li><em>Billing</em></li>
-			<li><em>Shipping</em></li>
-			<li><em>Thank You</em></li>
+		<ol class="cd-multi-steps text-center custom-icons">
+			<li id="login-tab" class="current"><span><i class="fa fa-user"></i></span></li>
+			<li id="billing-tab"><span><i class="fa fa-truck"></i></span></li>
+			<li id="payment-tab"><span><i class="fa fa-credit-card"></i></span></li>
+			<li id="thank-tab"><span><i class="fa fa-check"></i></span></li>
 		</ol>
 	</nav>
 <div class="container-fluid checkout-login-page">
@@ -94,11 +94,11 @@ do_action( 'woocommerce_before_checkout_form', $checkout );
 
 ?>
 <nav>
-		<ol class="cd-multi-steps text-bottom count">
-			<li id="login-tab" class="visited"><p>Login</p></li>
-			<li id="billing-tab" class="current"><a onclick="billing()"  href="javascript:0">Billing</a></li>
-			<li id="payment-tab"><a onclick="payment()"  href="javascript:0">Payment</a></li>
-			<li id="thank-tab"><p>Thank You</p></li>
+		<ol class="cd-multi-steps text-center custom-icons">
+			<li id="login-tab" class="visited"><span><i class="fa fa-user"></i></span></li>
+			<li id="billing-tab" class="current"><a onclick="billing()"  href="javascript:0"><i class="fa fa-truck"></i></a></li>
+			<li id="payment-tab"><a onclick="payment()"  href="javascript:0"><i class="fa fa-credit-card"></i></a></li>
+			<li id="thank-tab"><span><i class="fa fa-check"></i></span></li>
 		</ol>
 	</nav>
 <div class="row">

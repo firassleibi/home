@@ -20,13 +20,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-<ol class="cd-multi-steps text-bottom count">
-  <li id="login-tab" class="visited"><p>Login</p></li>
-  <li id="billing-tab" class="visited"><p>Billing</p></li>
-  <li id="shipping-tab" class="visited"><p>Shipping</p></li>
-  <li id="payment-tab" class="visited"><p>Payment</p></li>
-  <li id="thank-tab" class="current"><p>Thank You</p></li>
-</ol>
+
+<nav>
+		<ol class="cd-multi-steps text-center custom-icons">
+			<li id="login-tab" class="visited"><span><i class="fa fa-user"></i></span></li>
+			<li id="billing-tab" class="visited"><span><i class="fa fa-truck"></i></span></li>
+			<li id="payment-tab" class="visited"><span><i class="fa fa-credit-card"></i></span></li>
+			<li id="thank-tab" class="current"><span><i class="fa fa-check"></i></span></li>
+		</ol>
+	</nav>
 <div class="woocommerce-order">
 
 	<?php if ( $order ) : ?>

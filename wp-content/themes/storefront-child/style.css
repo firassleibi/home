@@ -5,6 +5,7 @@
  Template:       storefront
  Version:        1.0.0
 */
+@import "assets/css/progress.css";
 #checkout_login label{
   display: none;
 }
@@ -140,11 +141,8 @@ Basic Style
   /* add a custom icon before each item */
   content: '';
   display: inline-block;
-  height: 20px;
-  width: 20px;
-  margin-right: .4em;
+  margin-right: 0px;
   margin-top: -2px;
-  background: url(../img/cd-custom-icons-01.svg) no-repeat 0 0;
   vertical-align: middle;
 }
 .cd-breadcrumb.custom-icons li:not(.current):nth-of-type(2) > *::before, .cd-multi-steps.custom-icons li:not(.current):nth-of-type(2) > *::before {
@@ -319,6 +317,7 @@ Multi steps indicator
     background-color: transparent;
     padding: 0;
     text-align: center;
+    margin-bottom: 50px;
   }
 
   .cd-multi-steps li {
@@ -365,7 +364,7 @@ Multi steps indicator
   .cd-multi-steps.text-center li > * {
     z-index: 1;
     padding: .6em 1em;
-    border-radius: .25em;
+    border-radius: 360px;
     background-color: #edeff0;
   }
   .no-touch .cd-multi-steps.text-center a:hover {

@@ -44,3 +44,15 @@ function signInCallback(authResult){
     });
   }
 }
+jQuery(document).ready(function() {
+  jQuery(".progress-btn").on("click", function() {
+    var progressBtn = jQuery(this);
+
+    if (!progressBtn.hasClass("active")) {
+      progressBtn.addClass("active");
+      setTimeout(function() {
+        progressBtn.removeClass("active");
+      }, 3000);
+    }
+  })
+});
