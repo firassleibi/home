@@ -97,7 +97,6 @@ do_action( 'woocommerce_before_checkout_form', $checkout );
 		<ol class="cd-multi-steps text-bottom count">
 			<li id="login-tab" class="visited"><p>Login</p></li>
 			<li id="billing-tab" class="current"><a onclick="billing()"  href="javascript:0">Billing</a></li>
-			<li id="shipping-tab"><a onclick="shipping()" href="javascript:0">Shipping</a></li>
 			<li id="payment-tab"><a onclick="payment()"  href="javascript:0">Payment</a></li>
 			<li id="thank-tab"><p>Thank You</p></li>
 		</ol>
@@ -113,13 +112,7 @@ do_action( 'woocommerce_before_checkout_form', $checkout );
 					<div class="panel panel-default" id="step-billing">
 						<div class="panel-body">
 							<?php do_action( 'woocommerce_checkout_billing' ); ?>
-							<button type="button" class="btn btn-primary pull-right next">Next</button>
-						</div>
-					</div>
-					<div class="panel panel-default hidden"  id="step-shipping">
-						<div class="panel-body">
 							<?php do_action( 'woocommerce_checkout_shipping' ); ?>
-							<button type="button" class="btn btn-primary back">Back</button>
 							<button type="button" class="btn btn-primary pull-right next">Next</button>
 						</div>
 					</div>

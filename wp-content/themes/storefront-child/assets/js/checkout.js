@@ -3,25 +3,17 @@
 })(jQuery);
 jQuery(document).ready(function($) {
   $("#step-billing .next").click(function(){
-    shipping();
-  });
-  $("#step-shipping .back").click(function(){
-    billing();
-  });
-  $("#step-shipping .next").click(function(){
     payment();
   });
   $("#step-payment .back").click(function(){
-    shipping();
+    billing();
   });
 });
 
 function billing(){
   $("#step-billing").removeClass("hidden");
-  $("#step-shipping").addClass("hidden");
   $("#step-payment").addClass("hidden");
   $('#billing-tab').attr('class','current');
-  $('#shipping-tab').attr('class','');
   $('#payment-tab').attr('class','');
   $('#thank-tab').attr('class','');
   $('html, body').animate({
@@ -45,10 +37,8 @@ function shipping(){
 
 function payment(){
   $("#step-billing").addClass("hidden");
-  $("#step-shipping").addClass("hidden");
   $("#step-payment").removeClass("hidden");
   $('#billing-tab').attr('class','visited');
-  $('#shipping-tab').attr('class','visited');
   $('#payment-tab').attr('class','current');
   $('#thank-tab').attr('class','');
   $('html, body').animate({
