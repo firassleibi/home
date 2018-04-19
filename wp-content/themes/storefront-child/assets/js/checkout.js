@@ -88,3 +88,20 @@ function validate(){
 })( jQuery );
 
 }
+
+function login_validate(){
+  return (function( $ ) {
+    if($("#login_email").val()==""){
+      $(".login-error-message").removeClass('hidden');
+      $(".login-error-message").html("Email cannot be empty.");
+      return false;
+    }
+    if($("#login_password").val()==""){
+      $(".login-error-message").removeClass('hidden');
+      $(".login-error-message").html("Password cannot be empty.");
+      return false;
+    }
+
+})( jQuery );
+
+}

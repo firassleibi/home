@@ -1,5 +1,5 @@
 <?php
-global $errors;
+global $errors,$login_errors,$wp;
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
@@ -21,16 +21,26 @@ if(!is_user_logged_in()){
       <div class="panel panel-default">
         <div class="panel-heading">Login</div>
         <div class="panel-body">
-          <?php
-          $args = array(
-             'redirect' => get_permalink( wc_get_page_id( 'checkout' ) ),
-             'label_username' =>'',
-             'label_password' =>'',
-             'form_id' => 'checkout_login'
-         );
-          ?>
-          <?php wp_login_form($args)?>
+					<form method="POST" onsubmit="return login_validate()">
+            <div class="form-group">
+              <input name="login_email" type="email" id="login_email" placeholder="Email Address" class="form-control"/>
+            </div>
+            <div class="form-group">
+              <input name="login_password" type="password" id="login_password" placeholder="Password" class="form-control"/>
+            </div>
+
+						<?php if($login_errors!=''){ ?>
+							<p class="login-error-message text text-danger"><?php echo $login_errors ?></p>
+						<?php } ?>
+            <p class="login-error-message text text-danger hidden"></p>
+						<input type="hidden" name="url" value="<?php echo home_url(add_query_arg(array(),$wp->request))?>"/>
+            <input type="submit" name="custom_login" class="btn btn-primary" value="Login"/>
+
+          </form>
         </div>
+				<div class="panel-footer text-right">
+					<a href="<?php echo get_site_url()?>/recover-password/">Forgot password?</a>
+				</div>
       </div>
     </div>
 		<div class="col-md-6">
@@ -51,7 +61,8 @@ if(!is_user_logged_in()){
 							<p class="error-message text text-danger"><?php echo $errors ?></p>
 						<?php } ?>
             <p class="error-message text text-danger hidden"></p>
-            <input type="submit" name="register_checkout" class="btn btn-primary" value="Sign Up"/>
+						<input type="hidden" name="signup-url" value="<?php echo home_url(add_query_arg(array(),$wp->request))?>"/>
+            <input type="submit" name="custom_register" class="btn btn-primary" value="Sign Up"/>
 
           </form>
         </div>
@@ -64,8 +75,8 @@ if(!is_user_logged_in()){
       <div class="panel panel-default">
         <div class="panel-body">
           <p>Or</p>
-					<button class="social-login facebook"><i class="fa fa-facebook"></i> Connect with Facebook</button>
-          <button class="social-login google"><i class="fa fa-google"></i> Connect with Gmail</button>
+					<button onclick="checkLoginState()" class="social-login facebook"><i class="fa fa-facebook"></i> Connect with Facebook</button>
+          <button onclick="google_sign_in()" class="social-login google"><i class="fa fa-google"></i> Connect with Gmail</button>
         </div>
       </div>
     </div>
@@ -84,11 +95,11 @@ do_action( 'woocommerce_before_checkout_form', $checkout );
 ?>
 <nav>
 		<ol class="cd-multi-steps text-bottom count">
-			<li id="login-tab" class="visited"><a href="#">Login</a></li>
-			<li id="billing-tab" class="current"><a href="#">Billing</a></li>
-			<li id="shipping-tab"><a href="#">Shipping</a></li>
-			<li id="payment-tab"><a href="#">Payment</a></li>
-			<li id="thank-tab"><a href="#">Thank You</a></li>
+			<li id="login-tab" class="visited"><p>Login</p></li>
+			<li id="billing-tab" class="current"><a onclick="billing()"  href="javascript:0">Billing</a></li>
+			<li id="shipping-tab"><a onclick="shipping()" href="javascript:0">Shipping</a></li>
+			<li id="payment-tab"><a onclick="payment()"  href="javascript:0">Payment</a></li>
+			<li id="thank-tab"><p>Thank You</p></li>
 		</ol>
 	</nav>
 <div class="row">
@@ -147,14 +158,21 @@ do_action( 'woocommerce_before_checkout_form', $checkout );
     $items = $woocommerce->cart->get_cart();
 
         foreach($items as $item => $values) {
-            $_product =  wc_get_product( $values['data']->get_id());
-            echo "<b>".$_product->get_title().'</b>  <br> Quantity: '.$values['quantity'].'<br>';
-            $price = get_post_meta($values['product_id'] , '_price', true);
-            echo "  Price: ".$price." ".get_option('woocommerce_currency')."<br>";
+					$_product =  wc_get_product( $values['data']->get_id());
+					$image = wp_get_attachment_image_src( get_post_thumbnail_id( $_product->get_id() ), 'single-post-thumbnail' );
+					echo "<div class='row'>";
+					echo "<div class='col col-xs-3'><img src='".$image[0]."' data-id='".$_product->get_id()."'></div>";
+					echo "<div class='col col-xs-9'>";
+					echo "<b>".$_product->get_title().'</b>  <br> Quantity: '.$values['quantity'].'<br>';
+					$price = get_post_meta($values['product_id'] , '_price', true);
+					echo "  Price: ".$price." ".get_option('woocommerce_currency')."<br>";
+
+					echo "</div>";
+					echo "</div>";
+					echo "<div class='border'></div>";
 
         }
 				?>
-				<hr/>
 				<b>Total:</b> <?php echo WC()->cart->get_cart_total(); ?>
 				<a href="<?php echo get_permalink( wc_get_page_id( 'cart' ) ); ?>"><button class="btn btn-default pull-right" type="button">Edit Cart</button></a>
 			</div>

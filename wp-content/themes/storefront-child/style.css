@@ -11,14 +11,24 @@
 
 .social-login{
   color: #FFFFFF;
+  border-radius: 2px;
 }
 
 .social-login.facebook{
   background: #3b5998;
 }
 
+.social-login.facebook:hover{
+  background: #2b4272;
+  color: #FFFFFF;
+}
+
 .social-login.google{
   background:  #d34836;
+}
+.social-login.google:hover{
+  background:  #c44131;
+  color:#FFFFFF;
 }
 
 .order-summary button{
@@ -30,7 +40,9 @@
   margin-bottom: 7px;
   margin-top: 7px;
 }
-
+.checkout-login-page .panel .panel-footer{
+  background-color: initial;
+}
 @media only screen and (min-width: 1000px) {
 .flex{
   display: -webkit-box;
@@ -533,7 +545,8 @@ Make Bootstrap Modal Appear Center
   margin-right: 15px;
 }
 
-.modal-dialog .modal-body .border {
+
+.modal-dialog .modal-body .border, .panel .border{
     width: 90%;
     height: 1px;
     background-color: #e8e8e8;

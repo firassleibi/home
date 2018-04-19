@@ -21,11 +21,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 <ol class="cd-multi-steps text-bottom count">
-  <li id="login-tab" class="visited"><a href="#">Login</a></li>
-  <li id="billing-tab" class="visited"><a href="#">Billing</a></li>
-  <li id="shipping-tab" class="visited"><a href="#">Shipping</a></li>
-  <li id="payment-tab" class="visited"><a href="#">Payment</a></li>
-  <li id="thank-tab" class="current"><a href="#">Thank You</a></li>
+  <li id="login-tab" class="visited"><p>Login</p></li>
+  <li id="billing-tab" class="visited"><p>Billing</p></li>
+  <li id="shipping-tab" class="visited"><p>Shipping</p></li>
+  <li id="payment-tab" class="visited"><p>Payment</p></li>
+  <li id="thank-tab" class="current"><p>Thank You</p></li>
 </ol>
 <div class="woocommerce-order">
 
