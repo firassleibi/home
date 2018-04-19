@@ -133,10 +133,13 @@ function replace_loop_add_to_cart_button( $button, $product  ) {
     }*/
     $button_text = "Add to bag";
     if ( $product->is_type( 'variable' ) ) {
-      $button = '<a class="button" href="' . $product->get_permalink() . '">' . $button_text . '</a>';
+      $button = '<a href="' . $product->get_permalink() . '"><div class="progress-btn" data-progress-style="fill-back">
+	  <div class="btn">'.$button_text.'</div>
+	  <div class="progress"></div>
+	</div></a>';
     }
     else
-      $button = '<a class="" onclick="add_to_cart('.$product->get_id().')" href="javascript:;"><div class="progress-btn" data-progress-style="fill-back">
+      $button = '<a  onclick="add_to_cart('.$product->get_id().')" href="javascript:;"><div class="progress-btn" data-progress-style="fill-back">
 	  <div class="btn">'.$button_text.'</div>
 	  <div class="progress"></div>
 	</div></a>';
